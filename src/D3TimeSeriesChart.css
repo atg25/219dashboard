@@ -1,0 +1,14 @@
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+}
