@@ -1,3 +1,10 @@
+# Project description
+In IS219 we have been tasked with telling a story through data. Whethere it be through pie charts, time series graphs, scatter plots, etc. we need to use data and data visualization to tell a story with data.
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
