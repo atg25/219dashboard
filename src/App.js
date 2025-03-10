@@ -145,7 +145,7 @@ function App() {
         </p>
       </div>
 
-      <h2>4. Are STEM programs more accessible to hispanic stuents?</h2>
+      <h2>4. Are STEM programs more accessible to hispanic students?</h2>
       <div className="info">
         <p>
           Regional initiatives are programs that are designed to help students
