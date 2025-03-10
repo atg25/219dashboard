@@ -1,5 +1,5 @@
-import React from 'react';
-import DonutChart from './DonutChart';
+import React from "react";
+import DonutChart from "./DonutChart";
 
 const DemographicDonut12 = () => {
   return <DonutChart year="2012" />;

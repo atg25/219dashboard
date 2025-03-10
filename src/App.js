@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./App.css";
-import D3TimeSeriesChart from "./D3TimeSeriesChart";
+import "./Styles/App.css";
+import D3TimeSeriesChart from "./Charts/D3TimeSeriesChart";
 import DemographicDonut11 from "./Donuts/11Donut";
 import DemographicDonut12 from "./Donuts/12Donut";
 import DemographicDonut13 from "./Donuts/13Donut";
@@ -11,9 +11,9 @@ import DemographicDonut17 from "./Donuts/17Donut";
 import DemographicDonut18 from "./Donuts/18Donut";
 import DemographicDonut19 from "./Donuts/19Donut";
 import DemographicDonut20 from "./Donuts/20Donut";
-import GrowthBarChart from "./GrowthBarChart";
-import HispanicCollegeAgeChart from "./HIspanicCollegeAgeChart";
-import HSIChart from "./HISChart";
+import GrowthBarChart from "./Charts/GrowthBarChart";
+import HispanicCollegeAgeChart from "./Charts/HIspanicCollegeAgeChart";
+import HSIChart from "./Charts/HISChart";
 
 const charts = [
   DemographicDonut11,
@@ -49,11 +49,9 @@ function App() {
           alignItems: "center",
         }}
       >
-        <h1>
-          <u>Are University Diversity Programs working for the STEM Field?</u>
-        </h1>
+        <h1>How can we foster diversity in the STEM Field?</h1>
       </div>
-      <h1>What minority has shown the most growth?</h1>
+      <h1>What minority has shown the most growth in STEM Degrees?</h1>
       <div
         style={{
           display: "flex",
@@ -134,7 +132,11 @@ function App() {
         </p>
       </div>
 
-      <h2> 3. Are there more scholarships/grants available to hispanics?</h2>
+      <h2>
+        {" "}
+        3. Are there more scholarships/grants encouraging hispanic students to
+        pursue STEM?
+      </h2>
       <div className="info">
         <p>
           Scholarships and grants are a great way to help students pay for
@@ -142,11 +144,31 @@ function App() {
           likely they are to pursue a college degree.
         </p>
       </div>
-      <ul>
-        <li>Hispanic targeted scholarships/grants</li>
-        <li>regional initiatives, (could use gmap here)</li>
-      </ul>
+
+      <h2>4. Are STEM programs more accessible to hispanic stuents?</h2>
+      <div className="info">
+        <p>
+          Regional initiatives are programs that are designed to help students
+          in a specific region. These programs can help students get the
+          resources they need to succeed in college. (Google Maps here)
+        </p>
+      </div>
+
       <h1>How can we help other minorities?</h1>
+      <div className="info">
+        <p>
+          Obviously the efforts to help hispanics have been successful, but what
+          about other minorities? We can take the lessons learned from the
+          hispanic initiatives and apply them to other minority groups.
+        </p>
+        <ul>
+          <li>Have a sort of HSI classification for other demographics</li>
+          <li>
+            Look at regional initiatives and apply the most successful ones
+            nationally
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }

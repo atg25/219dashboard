@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import * as d3 from 'd3';
-import './DonutChart.css';
+import '../Styles/DonutChart.css';
 
 const DonutChart = ({ year }) => {
   const [data, setData] = useState([]);
