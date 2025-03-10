@@ -1,5 +1,6 @@
 # Project description
-In IS219 we have been tasked with telling a story through data. Whethere it be through pie charts, time series graphs, scatter plots, etc. we need to use data and data visualization to tell a story with data.
+In IS219 we have been tasked with telling a story through data. Whethere it be through pie charts, time series graphs, scatter plots, etc. we need to use data and data visualization to tell a story.\
+I found a massive data set from IPEDS documenting the STEM degrees awarded from 2011-2021 broken down by various demographics. I decided to select the data on minority STEM degrees as there is a lot of other data sets on minority post-secondary education and it is a prevelant topic in the news today.
 
 
 
