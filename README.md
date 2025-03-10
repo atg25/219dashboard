@@ -1,12 +1,12 @@
 # Project description
-In IS219 we have been tasked with telling a story through data. Whethere it be through pie charts, time series graphs, scatter plots, etc. we need to use data and data visualization to tell a story.\
+In IS219 we have been tasked with telling a story through data. Whethere it be through pie charts, time series graphs, scatter plots, etc. we need to use data and data visualization to tell a story.
 
 I found a massive data set from IPEDS documenting the STEM degrees awarded from 2011-2021 broken down by various demographics. I decided to select the data on minority STEM degrees as there is a lot of other data sets on minority post-secondary education and it is a prevelant topic in the news today.
 
 ## Data Sources
-- [IPEDS Data set on STEM degrees awarded from 2011-2021](https://nces.ed.gov/ipeds/search?query=Stem%20degrees&query2=Stem%20degrees&resultType=all&page=1&sortBy=relevance&overlayDigestTableId=202325)\
-- [Various data sets from US Census on Hispanic population from 2011-2021](https://www.census.gov/search-results.html?q=Hispanic+population&page=1&stateGeo=none&searchtype=web&cssp=SERP&_charset_=UTF-8)\
-- [Various documentation from HACU on HSIs from 2011-2021](https://www.hacu.net/hacu/HSIs.asp)\
+- [IPEDS Data set on STEM degrees awarded from 2011-2021](https://nces.ed.gov/ipeds/search?query=Stem%20degrees&query2=Stem%20degrees&resultType=all&page=1&sortBy=relevance&overlayDigestTableId=202325)
+- [Various data sets from US Census on Hispanic population from 2011-2021](https://www.census.gov/search-results.html?q=Hispanic+population&page=1&stateGeo=none&searchtype=web&cssp=SERP&_charset_=UTF-8)
+- [Various documentation from HACU on HSIs from 2011-2021](https://www.hacu.net/hacu/HSIs.asp)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
