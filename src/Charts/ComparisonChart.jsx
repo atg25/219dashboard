@@ -23,8 +23,8 @@ const ComparisonChart = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        console.log('Loading data from /data.csv');
-        const result = await d3.csv('/data.csv');
+        console.log('Loading data from ' + process.env.PUBLIC_URL + '/data.csv');
+        const result = await d3.csv(process.env.PUBLIC_URL + '/data.csv');
         
         if (!result || result.length === 0) {
           throw new Error('No data loaded');

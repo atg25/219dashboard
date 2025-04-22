@@ -1,10 +1,17 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --background-color: #f5f6fa;
-  --text-color: #2c3e50;
-  --card-background: #ffffff;
+  --primary-color: #2d4739;
+  --secondary-color: #7c9885;
+  --accent-color: #e09f3e;
+  --background-color: #f0f0f0;
+  --text-color: #333333;
+  --card-background: #f5f5f5;
   --border-radius: 8px;
   --spacing-unit: 1rem;
 }
@@ -22,7 +29,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navigation ul {
@@ -75,7 +82,7 @@ main {
   border-radius: var(--border-radius);
   padding: 2rem;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -92,22 +99,30 @@ main {
 }
 
 .metric {
-  background-color: var(--background-color);
+  background-color: var(
+    --card-background
+  ); /* Changed from --background-color for better contrast */
   padding: 1.5rem;
   border-radius: var(--border-radius);
   text-align: center;
+  border: 1px solid var(--secondary-color); /* Added border for definition */
 }
 
 .metric h3 {
-  color: var(--primary-color);
+  color: var(
+    --text-color
+  ); /* Changed from --primary-color for better visibility */
   margin: 0 0 0.5rem 0;
+  font-weight: 600; /* Added for better visibility */
 }
 
 .metric p {
   font-size: 2rem;
   font-weight: bold;
   margin: 0.5rem 0;
-  color: var(--secondary-color);
+  color: var(
+    --secondary-color
+  ); /* Changed from --secondary-color for better contrast */
 }
 
 .metric span {
@@ -172,10 +187,9 @@ main {
 
 .chart-legend {
   font-size: 0.8rem;
-  color: #666;
+  color: var(--text-color);
   margin-top: 1rem;
   padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: var(--border-radius);
   text-align: center;
   width: auto;
@@ -219,10 +233,10 @@ main {
 }
 
 .question-card {
-  background-color: var(--card-background);
+  background-color: var(--background-color);
   border-radius: var(--border-radius);
   padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   position: relative;
   border-left: 4px solid var(--secondary-color);
   text-align: left;
@@ -231,7 +245,7 @@ main {
 
 .question-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .question-number {
@@ -244,18 +258,18 @@ main {
   font-size: 1.2rem;
   padding: 0.5rem 0.8rem;
   border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .question-card h4 {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: var(--text-color);
   font-size: 1.1rem;
 }
 
 .question-card p {
-  color: #555;
+  color: var(--secondary-color);
   font-size: 0.95rem;
   line-height: 1.5;
 }
@@ -266,7 +280,7 @@ main {
 }
 
 .nav-button {
-  background-color: var(--secondary-color);
+  background-color: var(--accent-color);
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -274,14 +288,14 @@ main {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
 }
 
 .nav-button:hover {
-  background-color: #2980b9;
+  background-color: var(--primary-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .section-prompt {
@@ -313,7 +327,9 @@ main {
   margin-top: 2rem;
 }
 
-.key-takeaways, .societal-impact, .call-to-action {
+.key-takeaways,
+.societal-impact,
+.call-to-action {
   text-align: left;
 }
 
@@ -326,7 +342,8 @@ main {
   line-height: 1.5;
 }
 
-.societal-impact p, .call-to-action p {
+.societal-impact p,
+.call-to-action p {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -340,14 +357,14 @@ main {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin-top: 1rem;
 }
 
 .action-button:hover {
-  background-color: #c0392b;
+  background-color: var(--primary-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .insight-box {
@@ -432,7 +449,7 @@ main {
 }
 
 .tab-button.active::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -0.5rem;
   left: 0;
@@ -460,8 +477,12 @@ main {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Chart Control Styles */
@@ -532,7 +553,9 @@ select {
 
 /* Insights Styles */
 
-.chart-insights, .correlation-insight, .map-insights {
+.chart-insights,
+.correlation-insight,
+.map-insights {
   margin-top: 2rem;
   padding: 1.5rem;
   background-color: var(--background-color);
@@ -556,7 +579,9 @@ select {
   margin: 1rem 0;
 }
 
-.loading-message, .no-selection-message, .error-message {
+.loading-message,
+.no-selection-message,
+.error-message {
   padding: 2rem;
   color: var(--text-color);
   font-style: italic;
@@ -636,7 +661,7 @@ select {
   margin-bottom: 10px;
   background-color: #fff;
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 /* Tab Styles */
@@ -655,16 +680,16 @@ select {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .year-range-selector {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .tabs {
     flex-wrap: wrap;
   }
-  
+
   .tab-button {
     flex: 1;
     padding: 0.5rem;
@@ -678,6 +703,14 @@ select {
   color: white;
   padding: 1rem;
   margin-top: 2rem;
+}
+
+.disclaimer {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -706,4 +739,174 @@ select {
   .analysis-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Accessibility Controls Styles */
+.accessibility-controls {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contrast-toggle {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.contrast-toggle:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.1);
+}
+
+.contrast-toggle.active {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* High Contrast Theme */
+.high-contrast {
+  --primary-color: #1a2e22;
+  --secondary-color: #557c61;
+  --accent-color: #c78521;
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --card-background: #eaeaea;
+}
+
+.high-contrast .App {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.high-contrast .navigation,
+.high-contrast .App-header,
+.high-contrast .App-footer {
+  background-color: var(--primary-color);
+}
+
+.high-contrast .navigation button:hover,
+.high-contrast .navigation li.active button {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.high-contrast .card,
+.high-contrast .metric,
+.high-contrast .chart,
+.high-contrast .question-card,
+.high-contrast .recommendation,
+.high-contrast .chart-controls {
+  border: 2px solid var(--primary-color);
+}
+
+.high-contrast .metric h3,
+.high-contrast .chart h3,
+.high-contrast .question-card h4,
+.high-contrast .recommendation h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.high-contrast .metric p {
+  color: var(--accent-color);
+  font-weight: 900;
+  text-shadow: none;
+}
+
+.high-contrast .action-button,
+.high-contrast .nav-button,
+.high-contrast .scroll-nav-button {
+  background-color: var(--accent-color);
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.high-contrast .demographic-toggle.active {
+  background-color: var(--accent-color);
+  color: black;
+  border-color: black;
+}
+
+.high-contrast .tab-button.active {
+  color: var(--accent-color);
+  font-weight: 900;
+}
+
+.high-contrast .tab-button.active::after {
+  background-color: var(--accent-color);
+  height: 4px;
+}
+
+.high-contrast .insights-list li {
+  border-left-color: var(--accent-color);
+  border-left-width: 4px;
+}
+
+/* Section Navigation Buttons */
+.section-nav-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.scroll-nav-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.scroll-nav-button:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.scroll-top-button {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.scroll-top-button.visible {
+  opacity: 1;
+  visibility: visible;
 }

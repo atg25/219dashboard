@@ -8,7 +8,7 @@ const HSIChart = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const result = await d3.csv("/data3.csv", (d) => ({
+        const result = await d3.csv(process.env.PUBLIC_URL + "/data3.csv", (d) => ({
           year: new Date(d.year, 0, 1), // Convert year to Date object
           amount: +d.amount, // Convert amount to number
         }));
@@ -77,7 +77,7 @@ const HSIChart = () => {
       .append("path")
       .datum(data)
       .attr("fill", "none")
-      .attr("stroke", "#ffc658")
+      .attr("stroke", "#FFD700")
       .attr("stroke-width", 2)
       .attr("d", line);
 
@@ -91,7 +91,7 @@ const HSIChart = () => {
       .attr("cx", (d) => xScale(d.year))
       .attr("cy", (d) => yScale(d.amount))
       .attr("r", 3)
-      .attr("fill", "#ffc658");
+      .attr("fill", "#FFD700");
   }, [data]);
 
   return <svg ref={svgRef} />;

@@ -6,7 +6,7 @@ const GrowthBarChart = ({ data }) => {
 
   // Define demographics and colors
   const demographics = ['Black', 'Hispanic', 'Asian', 'Other'];
-  const colors = ['#82ca9d', '#ffc658', '#ff8042', '#3d426b'];
+  const colors = ['#82ca9d', '#ffc658', '#ff8042', '#8ba3d1'];
 
   // Create color scale
   const colorScale = d3.scaleOrdinal()
@@ -16,7 +16,7 @@ const GrowthBarChart = ({ data }) => {
   useEffect(() => {
     if (!data || !svgRef.current) return;
 
-    const margin = { top: 20, right: 30, bottom: 40, left: 50 };
+    const margin = { top: 20, right: 30, bottom: 60, left: 50 };
     const width = 800 - margin.left - margin.right;
     const height = 400 - margin.top - margin.bottom;
 
@@ -46,26 +46,14 @@ const GrowthBarChart = ({ data }) => {
       .attr('transform', `translate(0,${height})`)
       .call(d3.axisBottom(xScale))
       .selectAll('text')
-      .style('font-size', '15px'); // Increase font size for x-axis
+      .style('font-size', '15px')
+      .style('text-anchor', 'middle')
+      .attr('dy', '1.5em'); // Add more space below the axis line
 
     chartGroup.append('g')
       .call(d3.axisLeft(yScale))
       .selectAll('text')
       .style('font-size', '12px'); // Increase font size for y-axis
-
-    // Add horizontal gridlines
-    chartGroup.append('g')
-      .attr('class', 'grid')
-      .selectAll('line')
-      .data(yScale.ticks())
-      .enter()
-      .append('line')
-      .attr('x1', 0)
-      .attr('x2', width)
-      .attr('y1', d => yScale(d))
-      .attr('y2', d => yScale(d))
-      .attr('stroke', '#e0e0e0')
-      .attr('stroke-dasharray', '4');
 
     // Add bars
     chartGroup.selectAll('.bar')
@@ -85,6 +73,7 @@ const GrowthBarChart = ({ data }) => {
       .enter()
       .append('text')
       .attr('class', 'label')
+      .attr('fill', '#333333')
       .attr('x', d => xScale(d.name) + xScale.bandwidth() / 2)
       .attr('y', d => yScale(d.value) - 5)
       .attr('text-anchor', 'middle')

@@ -8,7 +8,7 @@ const HispanicCollegeAgeChart = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const result = await d3.csv("/data2.csv", (d) => ({
+        const result = await d3.csv(process.env.PUBLIC_URL + "/data2.csv", (d) => ({
           year: new Date(d.year, 0, 1), // Convert year to Date object
           amount: +d.amount, // Convert amount to number
         }));

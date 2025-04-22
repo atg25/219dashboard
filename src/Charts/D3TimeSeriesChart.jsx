@@ -8,7 +8,7 @@ function D3TimeSeriesChart() {
 
   // Define demographics and colors - using lowercase to match CSV
   const demographics = ['black', 'hispanic', 'asian', 'other'];
-  const colors = ['#82ca9d', '#ffc658', '#ff8042', '#3d426b'];
+  const colors = ['#82ca9d', '#ffc658', '#ff8042', '#8ba3d1'];
   
   // Create color scale
   const colorScale = d3.scaleOrdinal()
@@ -19,7 +19,7 @@ function D3TimeSeriesChart() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const result = await d3.csv('/data.csv');
+        const result = await d3.csv(process.env.PUBLIC_URL + '/data.csv');
         
         if (!result || result.length === 0) {
           throw new Error('No data loaded');
@@ -116,7 +116,7 @@ function D3TimeSeriesChart() {
           .datum(demoData)
           .attr('fill', 'none')
           .attr('stroke', colorScale(demo))
-          .attr('stroke-width', 2)
+          .attr('stroke-width', 4)
           .attr('d', line);
 
         // Add dots for data points
@@ -127,7 +127,7 @@ function D3TimeSeriesChart() {
           .attr('class', `dot-${demo}`)
           .attr('cx', d => xScale(d.year))
           .attr('cy', d => yScale(d.value))
-          .attr('r', 3)
+          .attr('r', 5)
           .attr('fill', colorScale(demo));
       });
 
@@ -152,11 +152,13 @@ function D3TimeSeriesChart() {
         .attr('y', -margin.left + 20)
         .attr('x', -(height / 2))
         .attr('text-anchor', 'middle')
+        .style("fill", "white")
         .style('font-size', '14px')
         .text('Number of Degrees');
 
       // Add legend
       const legend = svg.append('g')
+        .attr('fill', '#333333')
         .attr('font-size', '12px')
         .attr('transform', `translate(${width + margin.left + 20},${margin.top})`);
 

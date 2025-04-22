@@ -9,7 +9,7 @@ const DonutChart = ({ year }) => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const result = await d3.csv('/data.csv');
+        const result = await d3.csv(process.env.PUBLIC_URL + '/data.csv');
         console.log('CSV Data:', result); // Log CSV data to check if it's loaded correctly
 
         const filteredData = result
@@ -48,7 +48,7 @@ const DonutChart = ({ year }) => {
     loadData();
   }, [year]);
 
-  const COLORS = ['#82ca9d', '#ffc658', '#ff8042', '#3d426b'];
+  const COLORS = ['#82ca9d', '#ffc658', '#ff8042', '#8ba3d1'];
 
   const renderCustomizedLabel = ({
     cx,

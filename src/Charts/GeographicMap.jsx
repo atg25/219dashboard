@@ -15,7 +15,7 @@ const GeographicMap = () => {
 
   // Define color scales for each demographic - using more saturated colors
   const colorScales = {
-    hispanic: d3.scaleSequential(d3.interpolateYlOrBr).interpolator(d3.interpolate("#fff5eb", "#8c2d04")),
+    hispanic: d3.scaleSequential(d3.interpolateYlGn).interpolator(d3.interpolate("#ffffd9", "#FFD700")),
     black: d3.scaleSequential(d3.interpolateGreens).interpolator(d3.interpolate("#edf8e9", "#005a32")),
     asian: d3.scaleSequential(d3.interpolateOranges).interpolator(d3.interpolate("#feedde", "#a63603")),
     other: d3.scaleSequential(d3.interpolatePurples).interpolator(d3.interpolate("#f2f0f7", "#54278f"))
