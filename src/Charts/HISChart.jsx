@@ -8,7 +8,7 @@ const HSIChart = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const result = await d3.csv(process.env.PUBLIC_URL + "/data3.csv", (d) => ({
+        const result = await d3.csv("data3.csv", (d) => ({
           year: new Date(d.year, 0, 1), // Convert year to Date object
           amount: +d.amount, // Convert amount to number
         }));
@@ -45,10 +45,7 @@ const HSIChart = () => {
       .domain(d3.extent(data, (d) => d.year))
       .range([0, width]);
 
-    const yScale = d3
-      .scaleLinear()
-      .domain([0, 600])
-      .range([height, 0]);
+    const yScale = d3.scaleLinear().domain([0, 600]).range([height, 0]);
 
     // Add axes
     svg
@@ -56,10 +53,12 @@ const HSIChart = () => {
       .attr("transform", `translate(0,${height})`)
       .call(d3.axisBottom(xScale).ticks(d3.timeYear.every(1)));
 
-    const yAxis = svg.append("g")
+    const yAxis = svg
+      .append("g")
       .call(d3.axisLeft(yScale).ticks(5).tickFormat(d3.format("~s"))); // Format y-axis labels
 
-    yAxis.selectAll("g.tick")
+    yAxis
+      .selectAll("g.tick")
       .append("line")
       .attr("x1", 0)
       .attr("x2", width)

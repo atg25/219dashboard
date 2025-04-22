@@ -6,7 +6,7 @@ function Dashboard() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(process.env.PUBLIC_URL + "/data.csv")
+    fetch("data.csv")
       .then((response) => response.text())
       .then((csv) => {
         Papa.parse(csv, {
